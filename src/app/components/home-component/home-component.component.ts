@@ -12,7 +12,7 @@ export class HomeComponentComponent implements OnInit {
   ngOnInit(): void {
     this.service.getAllCountry().subscribe(country => {
      this. data=country
-     console.log(this.data)
+    
     })
     
   }
