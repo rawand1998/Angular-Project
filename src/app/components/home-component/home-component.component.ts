@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CountryserviceService} from '../../services/countryservice.service'
 @Component({
   selector: 'app-home-component',
   templateUrl: './home-component.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponentComponent implements OnInit {
 
-  constructor() { }
-
+  constructor( private service: CountryserviceService) { }
+  data:any
   ngOnInit(): void {
+    this.service.getAllCountry().subscribe(country => {
+     this. data=country
+     console.log(this.data)
+    })
+    
   }
 
 }
