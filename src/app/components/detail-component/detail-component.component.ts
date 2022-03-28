@@ -17,9 +17,14 @@ export class DetailComponentComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.userId=params['id'];
-      console.log(this.userId)
-     this.service.getCountryDetails(this.userId).subscribe(foodDetails=>{this.data=foodDetails})
-    
+      if(params['id'])
+      this.userId=params['id']
+      
+    this.service.getCountryDetails(this.userId).subscribe(food=>{
+      this.data=food
+      console.log(this.data)
+    })
+
      
     })
   }

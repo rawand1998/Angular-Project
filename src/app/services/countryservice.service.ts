@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CountryserviceService {
+ 
 
   constructor(private http: HttpClient ) { }
   country="https://restcountries.com/v3.1/all"
@@ -18,10 +19,19 @@ export class CountryserviceService {
       map((country: any) => {
         
   
-        return country.filter((country: { id: any; }) => country.id === id)[0];
+        return country.filter((country: any) =>country.name.common === id)[0];
       })
     );}
 
+//     getAllFoodsBySearchTerm(searchTerm:string){
+//       this.getAllCountry().subscribe((counties: any) => {
+
+//         let test = counties.filter((country: any) => country.name.common.includes(searchTerm))
+        
+// console.log(test)
+
+//       })
+//     }
    
   getAllCountry(){
     return this.http.get(this.country)
