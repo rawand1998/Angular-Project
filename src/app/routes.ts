@@ -5,4 +5,5 @@ export const routingTable = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
   {path:'home',component: HomeComponentComponent},
   {path:'details/:id',component: DetailComponentComponent},
+  {path:'search/:searchTerm',component: HomeComponentComponent},
   ]
