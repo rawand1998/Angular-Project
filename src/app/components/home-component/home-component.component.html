@@ -1,4 +1,4 @@
-<p>home-component works!</p>
+<app-search></app-search>
 <div *ngFor="let country of data">
     <p>{{country.name.common}}</p>
     <a [routerLink]="['/details/'+country.idd.root]">Read More</a>

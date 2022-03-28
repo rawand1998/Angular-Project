@@ -8,17 +8,21 @@ import { DetailComponentComponent } from './components/detail-component/detail-c
 import { routingTable } from './routes';
 import { HttpClientModule } from '@angular/common/http';
 import {CountryserviceService} from './services/countryservice.service';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
-    DetailComponentComponent
+    DetailComponentComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routingTable),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CountryserviceService],
   bootstrap: [AppComponent]
