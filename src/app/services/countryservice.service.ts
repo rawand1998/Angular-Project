@@ -10,7 +10,7 @@ export class CountryserviceService {
   constructor(private http: HttpClient ) { }
   country="https://restcountries.com/v3.1/all"
   
-  getCountryDetails(id:any):Observable<any>{
+  getCountryDetails(id:any){
     
     return this.getAllCountry().pipe(
       
@@ -21,8 +21,9 @@ export class CountryserviceService {
         return country.filter((country: { id: any; }) => country.id === id)[0];
       })
     );}
-    
-  getAllCountry():Observable<any>{
+
+   
+  getAllCountry(){
     return this.http.get(this.country)
 
   }
