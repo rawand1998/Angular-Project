@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CountryserviceService } from 'src/app/services/countryservice.service';
 
 @Component({
@@ -11,9 +11,9 @@ export class DetailComponentComponent implements OnInit {
   userId: any;
   data: any;
 
-  constructor(private service: CountryserviceService ,private route:ActivatedRoute) { }
+  constructor(private service: CountryserviceService ,private route:ActivatedRoute,private router:Router) { }
 
-
+  showBorder=false
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.userId=params['id'];
@@ -27,6 +27,10 @@ export class DetailComponentComponent implements OnInit {
 
      
     })
+  
+  }
+  border(){
+    return this.showBorder=true
   }
 
 }
