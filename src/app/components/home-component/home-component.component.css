@@ -1,0 +1,21 @@
+.country{
+    padding-bottom: 50px;
+}
+
+.country img{
+    height:200px;
+    width:100%
+}
+.country .country-property{
+    padding-top:5px;
+    color:#f00;
+    font-weight:bold
+}
+.country-name{
+    color:#000;
+    font-weight:normal
+}
+.read-more{
+    text-decoration: none;
+    font-weight: bold;
+}

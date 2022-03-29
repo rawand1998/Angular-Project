@@ -1,0 +1,13 @@
+.search-conatiner{
+    padding-top: 50px;
+    margin-left: 25%;
+}
+.search-conatiner input{
+    padding:10px;
+    width: 50%;
+}
+.search-conatiner button{
+    border:none;
+   margin-left: 15px;
+    padding:12px 20px
+}
