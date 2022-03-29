@@ -1,0 +1,22 @@
+.dropdown {
+    position: relative;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: 25%;
+}
+
+   
+  
+   
+  
+    label {
+        display: flex;
+        justify-content: space-between;
+      }
+ 
+  li {
+    padding: 0.5rem;
+    list-style: none;
+  }
