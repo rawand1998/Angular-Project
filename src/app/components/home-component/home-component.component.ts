@@ -11,7 +11,7 @@ export class HomeComponentComponent implements OnInit {
 
   constructor(private service: CountryserviceService, private route: ActivatedRoute) { }
   data: any
-  regionFilter?: string;
+  regionFilter: any;
   regionOptions = REGION_OPTIONS;
 
   ngOnInit(): void {
@@ -43,19 +43,28 @@ export class HomeComponentComponent implements OnInit {
     })
     
   // Filter country
-  
-   this.service.getAllCountry().subscribe((country: any) =>
-   {
-     let filter = country.filter((country: any) => 
-      this.regionFilter
-     ? country.region.includes(this.regionFilter)
-     : country)
-     this.data=filter
-     console.log((this.regionFilter))
-   }
-   
-   )
 
+  //  this.service.getAllCountry().subscribe((country: any) =>
+  //  {
+  //    let filter = country.filter((country: any) => 
+    
+  //     this.regionFilter=== country.region.includes(this.regionFilter)
+    
+  //    )
+     
+  //    this.data=filter
+  // console.log(filter)
+   
+  //  }
+  //  )
+   
+  // this.service.getAllCountry().subscribe((counties: any) => {
+  //   let filter = counties.filter((country: any) => {
+  //     this.regionFilter = country.region.includes(this.regionFilter)
+  //   })
+  //   this.data = filter
+  //   console.log(this.data)
+  // })
   }
 
   

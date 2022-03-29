@@ -24,6 +24,7 @@ export class DropdawnComponent  {
 
   select(value: string) {
     this.valueChange.emit(value);
+   
   }
 
   toggleOptions() {
