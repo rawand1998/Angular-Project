@@ -1,4 +1,9 @@
 <app-search></app-search>
+<app-dropdawn
+placeholder="Filter by Region"
+[values]="regionOptions"
+[(value)]="regionFilter"
+></app-dropdawn>
 <div *ngFor="let country of data">
     <p>{{country.name.common}}</p>
     <a [routerLink]="['/details/'+country.name.common]">Read More</a>
