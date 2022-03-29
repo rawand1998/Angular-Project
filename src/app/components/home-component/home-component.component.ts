@@ -8,12 +8,15 @@ const REGION_OPTIONS = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   styleUrls: ['./home-component.component.css']
 })
 export class HomeComponentComponent implements OnInit {
+  static content(content: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private service: CountryserviceService, private route: ActivatedRoute) { }
   data: any
   regionFilter: any;
   regionOptions = REGION_OPTIONS;
-
+  UserName="rawand" // for testing
   ngOnInit(): void {
     // get all
     this.service.getAllCountry().subscribe(country => {
