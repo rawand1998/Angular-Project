@@ -71,9 +71,7 @@ export class HomeComponentComponent implements OnInit {
  
 
 }
-function searchTerm(searchTerm: any, string: any) {
-  throw new Error('Function not implemented.');
-}
+
 
 function countries() {
   throw new Error('Function not implemented.');
