@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {CountryserviceService} from './services/countryservice.service';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { DropdawnComponent } from './components/dropdawn/dropdawn.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
     DetailComponentComponent,
-    SearchComponent
+    SearchComponent,
+    DropdawnComponent
   ],
   imports: [
     BrowserModule,
