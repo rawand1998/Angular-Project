@@ -44,12 +44,18 @@ export class HomeComponentComponent implements OnInit {
     
   // Filter country
   
-    return this.data .filter((country: { region: string | string[]; }) =>
-            this.regionFilter
-              ? country.region.includes(this.regionFilter)
-              : country
-          )
-    
+   this.service.getAllCountry().subscribe((country: any) =>
+   {
+     let filter = country.filter((country: any) => 
+      this.regionFilter
+     ? country.region.includes(this.regionFilter)
+     : country)
+     this.data=filter
+     console.log((this.regionFilter))
+   }
+   
+   )
+
   }
 
   
