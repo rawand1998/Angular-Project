@@ -11,13 +11,15 @@ import {CountryserviceService} from './services/countryservice.service';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { DropdawnComponent } from './components/dropdawn/dropdawn.component';
+import { BordercountryComponent } from './components/bordercountry/bordercountry.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
     DetailComponentComponent,
     SearchComponent,
-    DropdawnComponent
+    DropdawnComponent,
+    BordercountryComponent
   ],
   imports: [
     BrowserModule,

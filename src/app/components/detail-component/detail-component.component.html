@@ -9,7 +9,7 @@
             <p class="country-details">Region is : <span class="country-name">{{data.region}}</span></p>
             <p class="country-details">Status is : <span class="country-name">{{data.status}}</span></p>
           
-      <a >Border Country</a>
+      <button (click)="border()" class="btn btn-success">Border Country</button>
   
-    
+    <app-bordercountry [data]="data" *ngIf="showBorder"></app-bordercountry>
 </div>
