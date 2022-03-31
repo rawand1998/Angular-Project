@@ -1,9 +1,14 @@
-<app-search></app-search>
-<app-dropdawn
+<div class=" container navBar">
+    <h1>Counties World</h1>
+    <app-search></app-search>
+    <app-dropdawn
 placeholder="Filter by Region"
 [values]="regionOptions"
 [(value)]="regionFilter"
 ></app-dropdawn>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div *ngFor="let country of data" class="col-md-4 country">
