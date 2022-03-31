@@ -47,30 +47,18 @@ export class HomeComponentComponent implements OnInit {
     
   // Filter country
 
-  //  this.service.getAllCountry().subscribe((country: any) =>
-  //  {
-  //    let filter = country.filter((country: any) => 
-    
-  //     this.regionFilter=== country.region.includes(this.regionFilter)
-    
-  //    )
-     
-  //    this.data=filter
-  // console.log(filter)
+  
+  this.route.params.subscribe(params => {
+    if (params['region'])
+      this.service.getRegion(params['region']).subscribe((counties: any) => {
    
-  //  }
-  //  )
-   
-  // this.service.getAllCountry().subscribe((counties: any) => {
-  //   let filter = counties.filter((country: any) => {
-  //     this.regionFilter = country.region.includes(this.regionFilter)
-  //   })
-  //   this.data = filter
-  //   console.log(this.data)
-  // })
+        this.data = counties
+      
+      })
+  })
   }
 
-  
+    
  
 
 }

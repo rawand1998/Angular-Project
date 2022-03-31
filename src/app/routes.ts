@@ -7,5 +7,5 @@ export const routingTable = [
   {path:'home',component: HomeComponentComponent},
   {path:'details/:id',component: DetailComponentComponent},
   {path:'search/:searchTerm',component: HomeComponentComponent},
-  
+  {path:'region/:region',component: HomeComponentComponent},
   ]
