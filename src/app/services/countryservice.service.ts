@@ -23,21 +23,13 @@ export class CountryserviceService {
       })
     );}
 
-//     getAllFoodsBySearchTerm(searchTerm:string){
-//       this.getAllCountry().subscribe((counties: any) => {
 
-//         let test = counties.filter((country: any) => country.name.common.includes(searchTerm))
-        
-// console.log(test)
-
-//       })
-//     }
    
   getAllCountry(){
     return this.http.get(this.country)
-
+    
   }
   getRegion(region:any){
-    return this.http.get(`${environment.BASE_URL}/region/${region}`);
+    return this.http.get(`https://restcountries.com/v3.1/region/${region}`);
   }
 }
